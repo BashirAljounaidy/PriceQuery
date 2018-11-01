@@ -14,7 +14,21 @@
     <form id="frm">
     <label>اسم المنتج</label>
     <select id='list' onchange='getSelectValue()' required >
-        {{{body}}}
+    <option en =''code=''  cc=''re=''nd=''as=''s=''am=''m=''sh=''> الرجاء اختيار المنتج</option>
+    <option en ='ALOE VERA GEL'code='15'cc='0.113're='103'nd='87.55'as='66.95's='63.86'am='58.71'm='53.56'sh='0'>عصير الصبار الالوفيرا</option>
+    <option en ='GARCINA PLUS'code='71'cc='0.148're='135'nd='114.75'as='87.75's='83.7'am='76.95'm='70.2'sh='30'>جارسينيا بلس</option>
+    <option en ='Forever therm'code='463'cc='0.129're='117'nd='99.45'as='76.05's='72.54'am='66.69'm='60.84'sh='20'>ثيرم</option>
+    <option en ='Milk shake Forever lite ultra'code='470'cc='0.138're='125'nd='106.25'as='81.25's='77.5'am='71.25'm='65'sh='0'>ميلك شيك</option>
+    <option en ='FOREVER FIBER'code='464'cc='0.13're='118'nd='100.3'as='76.7's='73.16'am='67.26'm='61.36'sh='0'>فايبر</option>
+    <option en ='Clean9 21 days'code='475'cc='0.771're='698'nd='593.3'as='453.7's='432.76'am='397.86'm='362.96'sh='78'>كلين كامل ٢١ يوم</option>
+    <option en ='ALOE BLOSSOM HERBAL TEA'code='200'cc='0.079're='72'nd='61.2'as='46.8's='44.64'am='41.04'm='37.44'sh='30'>شاي</option>
+    <option en ='FIELDS OF GREENS'code='68'cc='0.054're='50'nd='42.5'as='32.5's='31'am='28.5'm='26'sh='20'>جرين اوف فيلدز</option>
+    <option en ='MULTI MACA'code='215'cc='0.118're='108'nd='91.8'as='70.2's='66.96'am='61.56'm='56.16'sh='30'>مالتي ماكا</option>
+    <option en ='Forever lean'code='289'cc='0.208're='171'nd='145.35'as='111.15's='106.02'am='97.47'm='88.92'sh='40'>لين</option>
+    <option en ='krsh'code='0'cc='0.359're=''nd='0'as='0's='106.02'am='0'm=''sh=''>كرش</option>
+    <option en ='small'code='0'cc='0.374're=''nd='0'as='0's='106.02'am='0'm=''sh=''>مصغرة</option>
+    <option en =''code=''  cc=''re=''nd=''as=''s=''am=''m=''sh=''>===================</option>
+       {{{body}}}
     </select><br>
     <label>العدد  :</label>
     <input id='pqty' type='number'><br>
@@ -27,6 +41,9 @@
     <option value='m'>منجر</option>
     </select>
     <br>
+    <label>سعر البيع:</label>
+    <input id='Want' type='number'>
+    <br>
     <label>التوصيل  :</label>
     <input id='deliveryPrice' type='number'><br>
     </form>
@@ -35,6 +52,7 @@
     </div>
     
     <div id='cart'></div>
+
 
 
     </body>
