@@ -12,6 +12,23 @@
     <!--Form-->
     
     <form id="frm">
+    
+    <label>اختر الرتبة</label>
+    <select id='ranklist'>
+    <option value='as'>مساعد مشرف</option>
+    <option value='s'>مشرف</option>
+    <option value='nd'>جديد</option>
+    <option value='am'>مساعد منجر</option>
+    <option value='m'>منجر</option>
+    </select>
+    <br>
+    <label>سعر البيع:</label>
+    <input id='Want' type='number'>
+    <br>
+    <label>التوصيل  :</label>
+    <input id='deliveryPrice' type='number' value="50">
+    <br>
+    
     <label>اسم المنتج</label>
     <select id='list'>
     <option en =''code=''  cc=''re=''nd=''as=''s=''am=''m=''sh=''> الرجاء اختيار المنتج</option>
@@ -32,20 +49,6 @@
     </select><br>
     <label>العدد  :</label>
     <input id='pqty' type='number'><br>
-    <label>اختر الرتبة</label>
-    <select id='ranklist'>
-    <option value='as'>مساعد مشرف</option>
-    <option value='s'>مشرف</option>
-    <option value='nd'>جديد</option>
-    <option value='am'>مساعد منجر</option>
-    <option value='m'>منجر</option>
-    </select>
-    <br>
-    <label>سعر البيع:</label>
-    <input id='Want' type='number'>
-    <br>
-    <label>التوصيل  :</label>
-    <input id='deliveryPrice' type='number'><br>
     </form>
     <button onclick='addItem()'>Add item</button>
 
