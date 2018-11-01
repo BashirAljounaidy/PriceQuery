@@ -36,7 +36,7 @@ function displayCart(){
   var Wanted=0
   Wanted = parseInt(document.getElementById('Want').value);
   profit=0;
-  cartdata = '<table><tr><th>المنتج</th><th>العدد</th><th></th><th>المجموع</th><th>النقاط</th><th>حذف</th></tr>';
+  cartdata = '<table><tr><th>المنتج</th><th>العدد</th><th></th><th></th><th>النقاط</th><th>حذف</th></tr>';
   
   totalPrice = 0;
   totalPoints=0;
