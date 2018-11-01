@@ -5,9 +5,6 @@ ipoints = []
 iserve= []
 
 function getSelectValue(){
-  var Code = document.forms['frm'].elements['list'].options[document.forms['frm']
-  .elements['list'].selectedIndex].getAttribute('re');
-console.log("Val of ren " + Code); //x or y
 }
 
 function addItem(){
@@ -36,7 +33,7 @@ function displayCart(){
   var Wanted=0
   Wanted = parseInt(document.getElementById('Want').value);
   profit=0;
-  cartdata = '<table><tr><th>المنتج</th><th>العدد</th><th></th><th></th><th>النقاط</th><th>حذف</th></tr>';
+  cartdata = '<table><tr><th>المنتج</th><th>العدد</th><th>النقاط</th><th>حذف</th></tr>';
   
   totalPrice = 0;
   totalPoints=0;
@@ -46,7 +43,7 @@ function displayCart(){
     totalPrice += iqtyp[i] * iprice[i]
     totalPoints += iqtyp[i] * ipoints[i]
     totalserve += iserve[i]
-    cartdata += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td></td><td></td><td>"+ iqtyp[i] * ipoints[i]+ "</td><td><button onclick='delElement(" + i + ")'>Delete</button></td></tr>"
+    cartdata += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td>"+ iqtyp[i] * ipoints[i]+ "</td><td><button onclick='delElement(" + i + ")'>Delete</button></td></tr>"
   }
   rank = document.getElementById('ranklist').value;
   if(totalserve>=70 &&rank=='nd' ) totalserve-=30
@@ -54,16 +51,15 @@ function displayCart(){
   profit= Math.ceil((Wanted-total)/5)*5;
   befor=Wanted-total;
   if(inames.length>0){
-  cartdata += '<tr><td>التوصيل</td><td></td><td></td><td>' + deliveryPrice1 + '</td><td></td></tr>'
-  cartdata += '<tr><td>الشحن والمصاريف</td><td></td><td></td><td>' + totalserve + '</td><td></td></tr>'
-  cartdata += '<tr><td>التكلفة الاجمالية</td><td></td><td></td><td>' + total+ '</td><td>' + totalPoints + '</td></tr>'
-  cartdata += '<tr><td>سعر البيع</td><td></td><td></td><td>' + Wanted+ '</td><td></td></tr>'
-  cartdata += '<tr><td>الربح </td><td></td><td></td><td>' + profit+ '</td><td></td></tr></table>'
+  cartdata += '<tr><td>التوصيل</td><td>' + deliveryPrice1 + '</td><td></td></tr>'
+  cartdata += '<tr><td>التكلفة الاجمالية</td><td>' + total+ '</td><td>' + totalPoints + '</td></tr>'
+  cartdata += '<tr><td>سعر البيع</td><td>' + Wanted+ '</td><td></td></tr>'
+  cartdata += '<tr><td>الربح </td><td>' + profit+ '</td><td></td></tr></table>'
   document.getElementById('cart').innerHTML = cartdata;
   }
   else
   {
-    document.getElementById('cart').innerHTML = "لايوجد منتجات في السلة";
+    document.getElementById('cart').innerHTML = "اضف منتجات من الاعلى";
   }
 }
 
@@ -73,5 +69,6 @@ function delElement(a){
   iqtyp.splice(a, 1)
   iprice.splice(a, 1)
   ipoints.splice(a, 1)
+  iserve.splice(a, 1)
   displayCart()
 }
