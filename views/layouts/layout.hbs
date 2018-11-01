@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>repl.it</title>
+        <title>PriceCalc</title>
         <script src="./javascripts/index.js"></script>
         <link href="./stylesheets/index.css" rel="stylesheet" type="text/css" />
     </head>
@@ -13,7 +13,7 @@
     
     <form id="frm">
     <label>اسم المنتج</label>
-    <select id='list' onchange='getSelectValue()' required >
+    <select id='list'>
     <option en =''code=''  cc=''re=''nd=''as=''s=''am=''m=''sh=''> الرجاء اختيار المنتج</option>
     <option en ='ALOE VERA GEL'code='15'cc='0.113're='103'nd='87.55'as='66.95's='63.86'am='58.71'm='53.56'sh='0'>عصير الصبار الالوفيرا</option>
     <option en ='GARCINA PLUS'code='71'cc='0.148're='135'nd='114.75'as='87.75's='83.7'am='76.95'm='70.2'sh='30'>جارسينيا بلس</option>
@@ -33,10 +33,10 @@
     <label>العدد  :</label>
     <input id='pqty' type='number'><br>
     <label>اختر الرتبة</label>
-    <select id='ranklist' onchange='getSelectValue()' required>
-    <option value='nd'>جديد</option>
+    <select id='ranklist'>
     <option value='as'>مساعد مشرف</option>
     <option value='s'>مشرف</option>
+    <option value='nd'>جديد</option>
     <option value='am'>مساعد منجر</option>
     <option value='m'>منجر</option>
     </select>
