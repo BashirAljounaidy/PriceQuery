@@ -9,7 +9,7 @@ function getSelectValue(){
 
 function addItem(){
   
-  
+
   var rank = document.getElementById('ranklist').value;
   var retailPrice = document.forms['frm'].elements['list'].options[document.forms['frm']
   .elements['list'].selectedIndex].getAttribute(rank);
@@ -46,8 +46,8 @@ function displayCart(){
     cartdata += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td>"+ iqtyp[i] * ipoints[i]+ "</td><td><button onclick='delElement(" + i + ")'>Delete</button></td></tr>"
   }
   rank = document.getElementById('ranklist').value;
-  if(totalserve>=70 &&rank=='nd' ) totalserve-=30
-  if(rank=='as' || rank=='s') totalserve+=10
+  if(totalserve>=70 &&rank=='nd' ) totalserve-=30;
+  if(rank=='as' || rank=='s') totalserve+=20;
   total=totalPrice+totalserve+deliveryPrice1;
   profit= Math.ceil((Wanted-total)/5)*5;
   befor=Wanted-total;
