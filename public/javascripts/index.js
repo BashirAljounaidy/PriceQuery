@@ -24,7 +24,7 @@ function addItem(){
   iserve.push(parseInt(shipping))
   console.log(iserve);
   displayCart()
-   
+  
 }
 
 function displayCart(){
@@ -47,6 +47,7 @@ function displayCart(){
   }
   rank = document.getElementById('ranklist').value;
   if(totalserve>=70 &&rank=='nd' ) totalserve-=30
+  if(rank=='as' || rank=='s') totalserve+=10
   total=totalPrice+totalserve+deliveryPrice1;
   profit= Math.ceil((Wanted-total)/5)*5;
   befor=Wanted-total;
