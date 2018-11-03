@@ -22,7 +22,6 @@ function addItem(){
   iprice.push(parseFloat(retailPrice).toPrecision(2))
   ipoints.push(parseFloat(points))
   iserve.push(parseInt(shipping))
-  console.log(iserve);
   displayCart()
   
 }
