@@ -48,7 +48,7 @@ function displayCart(){
   if(totalserve>=70 &&rank=='nd' ) totalserve-=30;
   if(rank=='as' || rank=='s') totalserve+=20;
   total=totalPrice+totalserve+deliveryPrice1;
-  profit= Math.ceil((Wanted-total)/5)*5;
+  profit= Wanted-total;
   befor=Wanted-total;
   if(inames.length>0){
   cartdata += '<tr><td>التوصيل</td><td>' + deliveryPrice1 + '</td><td></td></tr>'
